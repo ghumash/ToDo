@@ -1,0 +1,7 @@
+.App {
+  width: 100%;
+  max-width: 500px;
+  margin: 150px auto 0;
+  box-shadow: 0 0 50px 20px #ececec;
+  user-select: none;
+}

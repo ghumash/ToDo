@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  padding: 0;
+}

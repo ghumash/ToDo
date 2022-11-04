@@ -1,0 +1,29 @@
+.footer {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerText {
+  margin-left: 12px;
+  color: #999;
+}
+
+.btnClear {
+  height: 100%;
+  width: 150px;
+  background-color: #f5f5f5;
+
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btnClear:hover {
+  background-color: #e8e8e8;
+}
+
+.footerAddBtn {
+  cursor: pointer;
+  text-decoration: underline;
+}

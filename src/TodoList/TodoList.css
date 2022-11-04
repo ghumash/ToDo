@@ -1,0 +1,57 @@
+.todoListItem {
+  padding: 25px 15px;
+  cursor: grab;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  box-shadow: inset 0px -6px 20px -25px;
+  word-break: break-all;
+}
+
+.listItemInner {
+  margin-left: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.itemCheckbox {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.listItemText {
+  padding: 0;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.listItemBtnDel {
+  width: 35px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.listItemBtnDel:hover {
+  opacity: .3;
+}
+
+.listItemEditBtn {
+  width: 35px;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.listItemEditBtn:hover {
+  opacity: .3;
+}
+
+.listItemSecondInner {
+  display: flex;
+  align-items: center;
+}
