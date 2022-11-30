@@ -25,6 +25,7 @@
 }
 
 .listItemText {
+  width: 17em;
   padding: 0;
   margin-left: 1em;
 }
@@ -66,5 +67,11 @@
 @media (max-width: 767px) {
   .TodoList {
     margin-bottom: 4em;
+  }
+}
+
+@media (max-width: 400px) {
+  .listItemText {
+    width: 14em;
   }
 }
