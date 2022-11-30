@@ -1,17 +1,19 @@
+import { faMinus, faPen, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
-
 export default function TodoItem({
   todo,
   onChange,
   onDelete,
   isCompletedArr,
   cuttedArr,
+  popup,
   setCopyDisabledValue,
   setPasteDisabledValue,
   setCutDisabledValue,
 }) {
   const [tag, setTag] = useState(null);
-  const [todoIcon, setTodoIcon] = useState("./img/edit.png");
+  const [todoIcon, setTodoIcon] = useState(faPen);
 
   useEffect(() => {
     if (isCompletedArr.length !== 0) {
@@ -38,7 +40,7 @@ export default function TodoItem({
           ...todo,
           text: e.target.value,
         });
-        setTodoIcon("./img/checkbox.png");
+        setTodoIcon(faCheck);
       }}
     />
   );
@@ -46,13 +48,14 @@ export default function TodoItem({
   const tagFunc = () => {
     if (!todo.onModified) {
       todo.onModified = true;
-      setTodoIcon("./img/checkbox.png");
+      setTodoIcon(faCheck);
       setTag(textInput);
     } else {
       if (!todo.text) {
         onDelete(todo);
       }
-      setTodoIcon("./img/edit.png");
+      setTodoIcon(faPen);
+      popup("Saved!");
       todo.onModified = false;
       setTag(null);
     }
@@ -61,7 +64,7 @@ export default function TodoItem({
   return (
     <div key={todo.id} className="todoListItem">
       <label className="listItemInner">
-        <input // checkbox
+        <input
           className="itemCheckbox"
           type="checkbox"
           checked={todo.isCompleted}
@@ -76,22 +79,20 @@ export default function TodoItem({
       </label>
 
       <div className="listItemSecondInner">
-        <img
-          draggable="false"
+        <FontAwesomeIcon
+          icon={todoIcon}
           className="listItemEditBtn"
-          src={todoIcon}
-          alt="Edit"
+          draggable="false"
           onClick={tagFunc}
         />
-        <img
-          draggable="false"
+        <FontAwesomeIcon
+          icon={faMinus}
           className="listItemBtnDel"
+          draggable="false"
           onClick={() => {
             onDelete(todo);
           }}
-          src="./img/x.png"
-          alt="Delete"
-        ></img>
+        />
       </div>
     </div>
   );

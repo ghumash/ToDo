@@ -13,6 +13,7 @@ export default function TodoList({
   setCopyDisabledValue,
   setPasteDisabledValue,
   setCutDisabledValue,
+  popup,
   Reorder,
   AnimatePresence,
 }) {
@@ -42,7 +43,7 @@ export default function TodoList({
 
   return (
     <Reorder.Group as="div" values={todos} onReorder={setTodos}>
-      <div>
+      <div className="TodoList">
         {todos
           .filter((item) => {
             if (item.text.includes(text)) {
@@ -67,6 +68,7 @@ export default function TodoList({
                     todo={todo}
                     onChange={onChange}
                     onDelete={onDelete}
+                    popup={popup}
                     isCompletedArr={isCompletedArr}
                     cuttedArr={cuttedArr}
                     setCopyDisabledValue={setCopyDisabledValue}

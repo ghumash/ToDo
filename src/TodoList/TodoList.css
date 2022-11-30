@@ -1,5 +1,6 @@
 .todoListItem {
-  padding: 25px 15px;
+  padding: 1.5em 1em;
+  height: 4em;
   cursor: grab;
 
   display: flex;
@@ -12,7 +13,7 @@
 }
 
 .listItemInner {
-  margin-left: 10px;
+  margin-left: 1em;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -25,33 +26,45 @@
 
 .listItemText {
   padding: 0;
-  font-size: 30px;
-  margin-left: 10px;
+  margin-left: 1em;
 }
 
 .listItemBtnDel {
-  width: 35px;
   cursor: pointer;
-  padding: 10px;
+  color: #b71c1c;
   transition: 0.2s ease-in-out;
 }
 
 .listItemBtnDel:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .listItemEditBtn {
-  width: 35px;
-  padding: 10px;
+  width: 3em;
+  padding: 1em;
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .listItemEditBtn:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .listItemSecondInner {
   display: flex;
   align-items: center;
+}
+
+.fa-check {
+  color: #8bc34a;
+}
+
+.fa-pen {
+  color: #424242;
+}
+
+@media (max-width: 767px) {
+  .TodoList {
+    margin-bottom: 4em;
+  }
 }

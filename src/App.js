@@ -31,7 +31,6 @@ export default function App() {
 
   let isCompletedArr = todos.filter((todo) => todo.isCompleted);
 
-  // Outside functions //
   const popup = (text) => {
     swal({
       title: text,
@@ -41,11 +40,9 @@ export default function App() {
     });
     setTimeout(() => {
       swal.close();
-    }, 400);
+    }, 600);
   };
-  // Outside functions end //
 
-  // App functions //
   const onAdd = (text) => {
     return setTodos([
       ...todos,
@@ -60,6 +57,7 @@ export default function App() {
 
   const onDelete = (todo) => {
     setTodos(todos.filter((t) => t.id !== todo.id));
+    popup("Deleted!");
   };
 
   const onChange = (newTodo) => {
@@ -76,8 +74,6 @@ export default function App() {
   const onClearCompleted = () => {
     setTodos(todos.filter((todo) => !todo.isCompleted));
   };
-
-  // App functions end //
 
   return (
     <div className="App">
@@ -108,6 +104,7 @@ export default function App() {
         setPasteDisabledValue={setPasteDisabledValue}
         onDelete={onDelete}
         onChange={onChange}
+        popup={popup}
         Reorder={Reorder}
         AnimatePresence={AnimatePresence}
       />

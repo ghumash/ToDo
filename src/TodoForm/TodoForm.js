@@ -25,6 +25,7 @@ export default function TodoForm({
     if (text) {
       onAdd(text);
       popup("Added!");
+      setPlaceholder("What needs to be done?");
     } else {
       setPlaceholder("Give me a text!");
     }

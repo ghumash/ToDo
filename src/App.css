@@ -1,7 +1,26 @@
 .App {
   width: 100%;
-  max-width: 500px;
-  margin: 150px auto 0;
-  box-shadow: 0 0 50px 20px #ececec;
+  max-width: 30em;
+  margin: auto;
+  margin-top: 3.5em;
   user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.swal-modal {
+  margin: 1em;
+}
+
+.swal-title:first-child {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .App {
+    max-width: 100%;
+    margin: 0;
+  }
 }
